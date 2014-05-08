@@ -2,7 +2,7 @@ FROM ubuntu:12.04
 MAINTAINER Ian Neubert <ian@ianneubert.com>
 
 ### Update system
-RUN apt-get update
+RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y wget ca-certificates build-essential git mercurial bzr
 
 ENV PATH $PATH:/usr/local/go/bin
